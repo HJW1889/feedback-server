@@ -1,0 +1,4 @@
+uploads/
+feedback_logs.json
+__pycache__/
+*.pyc
