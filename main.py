@@ -8,18 +8,19 @@ app = FastAPI()
 
 # ✅ GitHub Pages 도메인만 허용 (추천)
 origins = [
-    "https://rkawk123.github.io",
-    "http://localhost:5500",   # 로컬 테스트용 (필요시)
+    "https://rkawk123.github.io",   # 전체 root pages라면 이게 맞음
+    "https://rkawk123.github.io/",  # 슬래시 붙인 버전도 함께 허용
+    "http://localhost:5500"
 ]
 
-# CORS 허용
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=origins,  # 필요하면 도메인 제한 가능
+    allow_origins=origins,
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
 )
+
 
 
 # 업로드 폴더 생성
