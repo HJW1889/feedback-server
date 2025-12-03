@@ -6,6 +6,12 @@ from datetime import datetime
 
 app = FastAPI()
 
+# ✅ GitHub Pages 도메인만 허용 (추천)
+origins = [
+    "https://rkawk123.github.io",
+    "http://localhost:5500",   # 로컬 테스트용 (필요시)
+]
+
 # CORS 허용
 app.add_middleware(
     CORSMiddleware,
