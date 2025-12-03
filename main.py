@@ -21,7 +21,6 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
-GUESTBOOK_DB = "guestbook.db"
 
 # 업로드 폴더 생성
 UPLOAD_DIR = "uploads"
