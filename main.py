@@ -15,7 +15,7 @@ origins = [
 # CORS 허용
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["*"],  # 필요하면 도메인 제한 가능
+    allow_origins=origins,  # 필요하면 도메인 제한 가능
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
